@@ -97,8 +97,8 @@ type variableProperties struct {
 			Enabled *bool
 		}
 
-		// include ninja variables
-		*android.Product_variables
+		// include NinjaOS variables
+		Ninja android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -173,8 +173,8 @@ type productVariables struct {
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
-	// include ninja variables
-	*android.ProductVariables
+	// include NinjaOS variables
+	Ninja android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
